@@ -8,7 +8,7 @@ const ThankYouPage = () => {
     const shareSurvey = () => {
         navigator.share({
             text: "Salesmall survey for college/university students",
-            url: "https://github.com/"
+            url: "https://salesmall-survey.netlify.app/"
         }).then(() => {
             console.log("Link shared")
         }).catch((error) => alert("Sorry, could not share"))
