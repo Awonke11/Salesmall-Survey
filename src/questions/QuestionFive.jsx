@@ -16,7 +16,7 @@ const QuestionFive = () => {
             <main className="question-content five-content">
                 <ProgressBar />
                 <div className="question-content-container five-content-container">
-                    <h3 className="question-content-container-title five-content-container-title">Would you by from a different store with less prices?</h3>
+                    <h3 className="question-content-container-title five-content-container-title">Would you buy the same product, from a different store, at a lower price?</h3>
                     <div className="question-content-container-select five-content-container-select">
                         <div 
                             className={select1 ? "question-selected" : "question-select"}
