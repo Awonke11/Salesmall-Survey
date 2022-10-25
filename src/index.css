@@ -166,7 +166,7 @@ body {
 .question-content-container {
   box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.25);
   border-radius: var(--main-border-radius);
-  padding: 3rem;
+  padding: 2rem;
   width: 35%;
 
   display: flex;
@@ -176,7 +176,7 @@ body {
 }
 
 .question-content-container-title {
-  margin: 2rem;
+  margin: 1.5rem;
   max-width: 70%;
   text-align: center;
   font-size: 1.3rem;
