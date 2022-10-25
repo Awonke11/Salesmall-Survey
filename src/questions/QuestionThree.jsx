@@ -16,6 +16,7 @@ const QuestionThree = () => {
     const [select7, setSelect7] = useState(false);
     const [select8, setSelect8] = useState(false);
     const [select9, setSelect9] = useState(false);
+    const [select10, setSelect10] = useState(false);
 
     function arrayIsEmpty(array) {
         if (array?.length === 0) {
@@ -105,9 +106,9 @@ const QuestionThree = () => {
                             style={{cursor: "pointer"}}
                         >Home Decor</div>
                         <div 
-                            className={select9 ? "question-selected" : "question-select"}
+                            className={select10 ? "question-selected" : "question-select"}
                             onClick={() => {
-                                setSelect9(select9 ? false : true)
+                                setSelect10(select10 ? false : true)
                                 setQuestion3(prev => [...prev, "Food"])
                             }}
                             style={{cursor: "pointer"}}
