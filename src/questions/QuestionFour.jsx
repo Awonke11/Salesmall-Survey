@@ -10,7 +10,9 @@ const QuestionFour = () => {
     const [store, setStore] = useState("");
 
     const addStoreToList = () => {
-        setStoreList(prev => [...prev, store])
+        if (store) {
+            setStoreList(prev => [...prev, store])
+        }
         setStore("")
     }
 
