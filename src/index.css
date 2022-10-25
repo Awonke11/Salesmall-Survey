@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root {
+  --main-color: #FF1616;
+  --secondary-color: #ffff;
+  --tertiary-color: #0000;
+
+  --main-border-radius: 20px;
+  --secondary-border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +25,305 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  height: 100vh;
+  width: 100%;
+}
+
+.home-page,
+.thank-you-page {
+  height: 100%;
+  width: 100%;
+}
+
+/** ------ Home Page ------------------  */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  padding-top: 0;
+  padding-bottom: 10rem;
+}
+
+.home-page-logo {
+  width: 350px;
+}
+
+.home-page-description {
+  max-width: 70%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.bold-text {
+  color: var(--main-color);
+}
+
+.home-page-signup {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  border-radius: var(--secondary-border-radius);
+  padding: 1rem;
+  color: var(--secondary-color);
+  transition: .5s linear;
+}
+
+.home-page-signup > h3 {
+  font-size: .8rem;
+  margin-left: .5rem;
+}
+
+.home-page-signup:hover {
+  transform: scale(1.1);
+}
+
+/** --------------- Navigation ---------------  */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10%;
+}
+
+.navigation-logo {
+  width: 120px;
+}
+
+.navigation-title {
+  margin-right: 1rem;
+}
+
+/** ----------------- Thank You Page -------------- */
+.thank-you-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+}
+
+.thank-you-page-content-title {
+  font-size: 5rem;
+  margin: 1rem;
+}
+
+.thank-you-page-content-quotes {
+  margin: 1rem;
+  margin-bottom: 2rem;
+  max-width: 80%;
+}
+
+.thank-you-page-content-quotes > * {
+  text-align: center;
+}
+
+.thank-you-page-content-quotes > p {
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+
+.thank-you-page-content-quotes > h4 {
+  font-size: 1.5rem;
+}
+
+.thank-you-page-content-ebook {
+  background-color: var(--main-color);
+  border-radius: var(--secondary-border-radius);
+  padding: 1.2rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: .5s linear;
+}
+
+.thank-you-page-content-ebook > h3 {
+  font-size: 1rem;
+}
+
+.thank-you-page-content-ebook:hover {
+  transform: scale(1.1);
+}
+
+/** -------------- Questions ----------------  */
+.question {
+  height: 100%;
+  width: 100%;
+}
+
+.question-content {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question-content-container {
+  box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.25);
+  border-radius: var(--main-border-radius);
+  padding: 3rem;
+  width: 35%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-content-container-title {
+  margin: 2rem;
+  max-width: 70%;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.question-content-container-select {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+}
+
+.question-select,
+.question-selected {
+  border: 1px solid var(--main-color);
+  padding: .5rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  width: 150px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--secondary-border-radius);
+}
+
+.question-selected {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
+.question-content-container-link {
+  background-color: var(--main-color);
+  border-radius: var(--secondary-border-radius);
+  padding: 1.2rem;
+  width: 100px;
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: .5s linear;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.question-content-container-link:hover {
+  transform: scale(1.1);
+}
+
+.question-content-container-add {
+  width: 100%;
+  border-radius: var(--secondary-border-radius);
+  border: 1px solid var(--main-color);
+}
+
+.question-content-container-add > input {
+  height: 100%;
+  width: 80%;
+  padding: .5rem;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.question-content-container-add > button {
+  height: 100%;
+  width: 20%;
+  border: none;
+  background-color: var(--main-color);
+  border-radius: var(--secondary-border-radius);
+  color: var(--secondary-color);
+  font-weight: 700;
+  padding: .5rem;
+}
+
+/** --------------- Progress Bar ----------------  */
+.progress-bar {
+  width: 80%;
+  height: 2%;
+  border: 1px solid var(--main-color);
+}
+
+.progress-bar-show {
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+/** ----------- Question Each ----------  */
+.two-content-container-link,
+.three-content-container-link {
+  margin-bottom: 2rem;
+}
+
+.two-content-container,
+.three-content-container {
+  padding: 1.5rem;
+}
+
+.four-content-container-title {
+  max-width: 80%;
+}
+
+/** ------------- Responsive ------------------  */
+@media screen and (max-width: 600px) {
+  .home-page {
+    padding: 3rem;
+    padding-bottom: 10rem;
+  }
+
+  .home-page-description {
+    font-size: 1.2rem;
+    max-width: 100%;
+    margin-bottom: 7rem;
+  }
+
+  .thank-you-page-content-title {
+    font-size: 2.5rem;
+  }
+
+  .question-content-container {
+    width: 80%;
+    padding: 1.5rem;
+  }
+  
+  .question-content-container-title {
+    max-width: 95%;
+    margin: 1rem;
+  }
+
+  .question-content-container-select {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .question-content-container-select {
+    width: 100%;
+  }
+
+  .question-select,
+  .question-selected {
+    width: 100%;
+    margin: 0;
+    margin-bottom: .8rem;
+  }
+
+  .question-content-container-add {
+    margin: 0 .5rem;
+  }
 }

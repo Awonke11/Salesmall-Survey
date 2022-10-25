@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ThankYouPage from "./pages/ThankYouPage";
+import QuestionOne from "./questions/QuestionOne";
+import QuestionTwo from "./questions/QuestionTwo";
+import QuestionThree from "./questions/QuestionThree";
+import QuestionFour from "./questions/QuestionFour";
+import QuestionFive from "./questions/QuestionFive";
+import QuestionSix from "./questions/QuestionSix";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/thank-you" element={<ThankYouPage />} />
+
+          <Route path="/question/1" element={<QuestionOne />}/>
+          <Route path="/question/2" element={<QuestionTwo />}/>
+          <Route path="/question/3" element={<QuestionThree />}/>
+          <Route path="/question/4" element={<QuestionFour />}/>
+          <Route path="/question/5" element={<QuestionFive />}/>
+          <Route path="/question/6" element={<QuestionSix />}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
