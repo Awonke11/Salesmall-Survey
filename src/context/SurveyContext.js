@@ -2,7 +2,7 @@ import { createContext, useState, useEffect } from "react";
 import {auth} from "../firebase/firebaseConfig";
 import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 
-export const SurveyContext = createContext(null);
+export const SurveyContext = createContext();
 
 const SurveyContextProvider = ({children}) => {
     const [username, setUsername] = useState("");
