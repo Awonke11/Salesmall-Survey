@@ -104,6 +104,14 @@ const QuestionThree = () => {
                             }}
                             style={{cursor: "pointer"}}
                         >Home Decor</div>
+                        <div 
+                            className={select9 ? "question-selected" : "question-select"}
+                            onClick={() => {
+                                setSelect9(select9 ? false : true)
+                                setQuestion3(prev => [...prev, "Food"])
+                            }}
+                            style={{cursor: "pointer"}}
+                        >Food</div>
                     </div>
                 </div>
                 {
