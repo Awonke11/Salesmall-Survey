@@ -69,7 +69,7 @@ const QuestionOne = () => {
                 <Link 
                     to="/question/2" 
                     onClick={increaseProgressBar} 
-                    className="question-content-container-link">Next</Link>
+                    className="question-content-container-link">Next</Link>         
             </main>
         </div>
     )

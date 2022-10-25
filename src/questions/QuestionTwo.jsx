@@ -5,7 +5,7 @@ import { SurveyContext } from '../context/SurveyContext';
 import {Link} from "react-router-dom";
 
 const QuestionTwo = () => {
-    const {increaseProgressBar, setQuestion2} = useContext(SurveyContext);
+    const {increaseProgressBar, setQuestion2, question2} = useContext(SurveyContext);
 
     const [select1, setSelect1] = useState(false);
     const [select2, setSelect2] = useState(false);
@@ -16,6 +16,13 @@ const QuestionTwo = () => {
     const [select7, setSelect7] = useState(false);
     const [select8, setSelect8] = useState(false);
     const [select9, setSelect9] = useState(false);
+
+    function arrayIsEmpty(array) {
+        if (array?.length === 0) {
+            return true;
+        }
+        return false;
+    }
 
     return (
         <div className="question two">
@@ -99,10 +106,12 @@ const QuestionTwo = () => {
                         >Home Decor</div>
                     </div>
                 </div>
-                <Link 
+                {
+                    (arrayIsEmpty(question2)) ? <div className="question-content-container-link two-content-container-link" onClick={() => {alert("Please select at least one option")}}>Next</div> : <Link 
                     to="/question/3" 
                     onClick={increaseProgressBar} 
                     className="question-content-container-link two-content-container-link">Next</Link>
+                }
             </main>
         </div>
     )

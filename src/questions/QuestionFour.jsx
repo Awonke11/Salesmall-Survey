@@ -14,6 +14,13 @@ const QuestionFour = () => {
         setStore("")
     }
 
+    function arrayIsEmpty(array) {
+        if (array?.length === 0) {
+            return true;
+        }
+        return false;
+    }
+
     return (
         <div className="question four">
             <Navigation />
@@ -38,13 +45,15 @@ const QuestionFour = () => {
                         }
                     </div>
                 </div>
-                <Link 
+                {
+                    (arrayIsEmpty(storeList)) ? <div className="question-content-container-link four-content-container-link" onClick={() => {alert("Please enter at least one store")}}>Next</div> : <Link 
                     to="/question/5" 
                     onClick={() => {
                         increaseProgressBar()
                         storeList.map(each => setQuestion4(prev => [...prev, each]))
                     }} 
                     className="question-content-container-link four-content-container-link">Next</Link>
+                }
             </main>
         </div>
     )
