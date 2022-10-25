@@ -29,17 +29,29 @@ const SurveyContextProvider = ({children}) => {
         setProgressBar(JSON.parse(getProgressBar));
 
         const getQuestion1 = localStorage.getItem("question1");
-        setQuestion1(JSON.parse(getQuestion1));
+        if (getQuestion1) {
+            setQuestion1(JSON.parse(getQuestion1));
+        }
         const getQuestion2 = localStorage.getItem("question2");
-        setQuestion2(JSON.parse(getQuestion2));
+        if (getQuestion2) {
+            setQuestion2(JSON.parse(getQuestion2));
+        }
         const getQuestion3 = localStorage.getItem("question3");
-        setQuestion3(JSON.parse(getQuestion3));
+        if (getQuestion3) {
+            setQuestion3(JSON.parse(getQuestion3));
+        }
         const getQuestion4 = localStorage.getItem("question4");
-        setQuestion4(JSON.parse(getQuestion4));
+        if (getQuestion4) {
+            setQuestion4(JSON.parse(getQuestion4)); 
+        }
         const getQuestion5 = localStorage.getItem("question5");
-        setQuestion5(JSON.parse(getQuestion5));
+        if (getQuestion5) {
+            setQuestion5(JSON.parse(getQuestion5));
+        }
         const getQuestion6 = localStorage.getItem("question6");
-        setQuestion6(JSON.parse(getQuestion6));
+        if (getQuestion6) {
+            setQuestion6(JSON.parse(getQuestion6));
+        }
     }, [])
 
     useEffect(() => {
