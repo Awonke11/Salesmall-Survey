@@ -11,7 +11,7 @@ const HomePage = () => {
     return (
         <div className="home-page">
             <img src={logo} alt="business-logo" className="home-page-logo" />
-            <p className="home-page-description">A survey that researches how university/college students spend their money, conducted by a company that cares about their <b className="bold-text">montly spendings</b>. We expose college/university students to product sales that will make them <b className="bold-text">spend less</b> and enjoy more.</p>
+            <p className="home-page-description">A survey that researches how university/college students spend their money, conducted by a company that cares about their <b className="bold-text">monthly spendings</b>. We expose college/university students to product sales that will make them <b className="bold-text">spend less</b> and enjoy more.</p>
             <div className="home-page-signup" onClick={() => {
                 signInUserWithGoogle()
                 setProgressBar(0)
