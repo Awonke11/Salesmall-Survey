@@ -326,4 +326,12 @@ body {
   .question-content-container-add {
     margin: 0 .5rem;
   }
+
+  .two-content-container-select,
+  .three-content-container-select,
+  .four-content-container-select {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+  }
 }
