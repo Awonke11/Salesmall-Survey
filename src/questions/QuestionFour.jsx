@@ -29,7 +29,7 @@ const QuestionFour = () => {
             <main className="question-content four-content">
                 <ProgressBar />
                 <div className="question-content-container four-content-container">
-                    <h3 className="question-content-container-title four-content-container-title">What stores (online included) do you normally buy from?</h3>
+                    <h3 className="question-content-container-title four-content-container-title">What stores (online included) do you normally buy from? (Please add one item at a time)</h3>
                     <div  className="question-content-container-add four-content-container-add">
                         <input 
                             type="text" 
