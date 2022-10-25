@@ -5,7 +5,7 @@ import { FaGoogle } from "react-icons/fa";
 import {useNavigate} from "react-router-dom";
 
 const HomePage = () => {
-    const {signInUserWithGoogle, setProgressBar} = useContext(SurveyContext);
+    const {signInUserWithGoogle, setProgressBar, setQuestion2, setQuestion3, setQuestion4} = useContext(SurveyContext);
     const navigate = useNavigate();
 
     return (
@@ -16,6 +16,9 @@ const HomePage = () => {
                 signInUserWithGoogle()
                 setProgressBar(0)
                 navigate("/question/1")
+                setQuestion2([])
+                setQuestion3([])
+                setQuestion4([])
             }}>
                 <FaGoogle />
                 <h3>Continue with Google</h3>
